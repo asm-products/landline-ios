@@ -106,6 +106,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="bjJ-H2-g1t">
+            <objects>
+                <viewController id="pvO-eG-nNJ" customClass="ChatViewController" customModule="landline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W7P-gT-fhb"/>
+                        <viewControllerLayoutGuide type="bottom" id="QC1-wr-zLU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kHk-Cu-LNj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrz-Vw-3JK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="1044"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hrg-E4-3Ao">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tn0-d7-Qon" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="CentralViewController" id="a14-wx-OTj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WRc-Jn-Ueo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0YY-j6-0wU" kind="relationship" relationship="rootViewController" id="Yue-gK-OhS"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1365" y="1044"/>
+        </scene>
+        <!--Chat List View Controller-->
+        <scene sceneID="xAQ-bg-xhV">
+            <objects>
+                <viewController id="0YY-j6-0wU" customClass="ChatListViewController" customModule="landline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J0v-40-WA0"/>
+                        <viewControllerLayoutGuide type="bottom" id="cc6-Ev-JZG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sX3-9c-hvW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x1E-HQ-TSU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3d-Ei-zR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-585" y="1044"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="roC-JZ-KjC">
+            <objects>
+                <viewController id="rbr-K3-JC7" customClass="MenuViewController" customModule="landline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o94-N1-gqc"/>
+                        <viewControllerLayoutGuide type="bottom" id="ppw-Ab-r5N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RO2-rq-bak">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5K6-eu-Jex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-585" y="1754"/>
+        </scene>
         <!--Landline-->
         <scene sceneID="G8c-WJ-kkh">
             <objects>
@@ -132,6 +203,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUI-XC-Bfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1008" y="322"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="JeA-vb-gIe">
+            <objects>
+                <viewController id="Knn-HR-CjS" customClass="SettingsViewController" customModule="landline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sk5-aq-Ne6"/>
+                        <viewControllerLayoutGuide type="bottom" id="0lX-OY-cas"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wjE-bG-2XL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="weg-qm-Jbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="1044"/>
         </scene>
     </scenes>
 </document>

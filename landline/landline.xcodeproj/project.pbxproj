@@ -17,6 +17,8 @@
 		B8A22AC01AA0DF0C00BEB50F /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A22ABF1AA0DF0C00BEB50F /* SlideMenuController.swift */; };
 		B8CD53711AA0E48B00CD6830 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53701AA0E48B00CD6830 /* MenuViewController.swift */; };
 		B8CD53731AA0E49700CD6830 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53721AA0E49700CD6830 /* ChatViewController.swift */; };
+		B8CD53761AA19A5D00CD6830 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */; };
+		B8CD53781AA19A7500CD6830 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		B8A22ABF1AA0DF0C00BEB50F /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		B8CD53701AA0E48B00CD6830 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B8CD53721AA0E49700CD6830 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 				B8A22ABD1AA0DEC400BEB50F /* MainViewController.swift */,
 				B8CD53701AA0E48B00CD6830 /* MenuViewController.swift */,
 				B8CD53721AA0E49700CD6830 /* ChatViewController.swift */,
+				B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */,
+				B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */,
 				B8A22ABF1AA0DF0C00BEB50F /* SlideMenuController.swift */,
 				B8A22A9B1A9F31E200BEB50F /* Supporting Files */,
 			);
@@ -228,8 +234,10 @@
 				B8A22AA01A9F31E200BEB50F /* LoginViewController.swift in Sources */,
 				B8A22AC01AA0DF0C00BEB50F /* SlideMenuController.swift in Sources */,
 				B8A22A9E1A9F31E200BEB50F /* AppDelegate.swift in Sources */,
+				B8CD53761AA19A5D00CD6830 /* ChatListViewController.swift in Sources */,
 				B8CD53731AA0E49700CD6830 /* ChatViewController.swift in Sources */,
 				B8CD53711AA0E48B00CD6830 /* MenuViewController.swift in Sources */,
+				B8CD53781AA19A7500CD6830 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
