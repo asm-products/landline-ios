@@ -14,7 +14,7 @@ class MainViewController : UIViewController {
     
     var menuViewController : MenuViewController? = MenuViewController()
     
-    var centralViewController : UINavigationController?
+    var centralNavigationViewController : CentralNavigationViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,20 +24,22 @@ class MainViewController : UIViewController {
         self.navigationItem.hidesBackButton = true
         
         self.menuViewController?.view.frame = self.view.frame;
-        self.slideMenuController = SlideMenuController(mainViewController: centralViewController!, leftMenuViewController: menuViewController!)
+        self.slideMenuController = SlideMenuController(mainViewController: centralNavigationViewController!, leftMenuViewController: menuViewController!)
         
         self.addChildViewController(self.slideMenuController!)
         self.slideMenuController?.view.frame = self.view.frame
         self.view.addSubview(self.slideMenuController!.view!)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMenu", name: "showMenu", object: nil);
     }
     
     func loadCentralViewController() {
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        self.centralViewController = storyboard.instantiateViewControllerWithIdentifier("CentralViewController") as?UINavigationController
-        self.centralViewController?.view.frame = self.view.frame;
+        self.centralNavigationViewController = storyboard.instantiateViewControllerWithIdentifier("CentralNavigationViewController") as?CentralNavigationViewController
+        self.centralNavigationViewController?.view.frame = self.view.frame;
     }
     
-    @IBAction func showMenu() {
+    func showMenu() {
         self.slideMenuController?.openLeft()
     }
 }

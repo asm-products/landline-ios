@@ -13,16 +13,16 @@ class SlideMenuOption {
     let leftViewWidth: CGFloat = 80.0
     let leftBezelWidth: CGFloat = 16.0
     let contentViewScale: CGFloat = 1.0
-    let contentViewOpacity: CGFloat = 0.0
+    let contentViewOpacity: CGFloat = 0.44
     let shadowOpacity: CGFloat = 0.0
     let shadowRadius: CGFloat = 0.0
     let shadowOffset: CGSize = CGSizeMake(0,0)
-    let panFromBezel: Bool = true
+    let panFromBezel: Bool = false
     let animationDuration: CGFloat = 0.4
     let rightViewWidth: CGFloat = 270.0
     let rightBezelWidth: CGFloat = 16.0
-    let rightPanFromBezel: Bool = true
-    let hideStatusBar: Bool = true
+    let rightPanFromBezel: Bool = false
+    let hideStatusBar: Bool = false
     let pointOfNoReturnWidth: CGFloat = 44.0
     
     init() {

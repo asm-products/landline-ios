@@ -19,6 +19,7 @@
 		B8CD53731AA0E49700CD6830 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53721AA0E49700CD6830 /* ChatViewController.swift */; };
 		B8CD53761AA19A5D00CD6830 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */; };
 		B8CD53781AA19A7500CD6830 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */; };
+		B8CD537A1AA1B18F00CD6830 /* CentralNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53791AA1B18F00CD6830 /* CentralNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		B8CD53721AA0E49700CD6830 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B8CD53791AA1B18F00CD6830 /* CentralNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				B8CD53701AA0E48B00CD6830 /* MenuViewController.swift */,
 				B8CD53721AA0E49700CD6830 /* ChatViewController.swift */,
 				B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */,
+				B8CD53791AA1B18F00CD6830 /* CentralNavigationViewController.swift */,
 				B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */,
 				B8A22ABF1AA0DF0C00BEB50F /* SlideMenuController.swift */,
 				B8A22A9B1A9F31E200BEB50F /* Supporting Files */,
@@ -237,6 +240,7 @@
 				B8CD53761AA19A5D00CD6830 /* ChatListViewController.swift in Sources */,
 				B8CD53731AA0E49700CD6830 /* ChatViewController.swift in Sources */,
 				B8CD53711AA0E48B00CD6830 /* MenuViewController.swift in Sources */,
+				B8CD537A1AA1B18F00CD6830 /* CentralNavigationViewController.swift in Sources */,
 				B8CD53781AA19A7500CD6830 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
