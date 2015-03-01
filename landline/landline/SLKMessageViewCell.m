@@ -19,7 +19,7 @@
             _titleLabel = [[UILabel alloc] initWithFrame:self.bounds];
             _titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
             _titleLabel.numberOfLines = 0;
-            _titleLabel.backgroundColor = [UIColor lightGrayColor];
+            _titleLabel.backgroundColor = [UIColor clearColor];
             _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
             [self.contentView addSubview:self.titleLabel];
         }

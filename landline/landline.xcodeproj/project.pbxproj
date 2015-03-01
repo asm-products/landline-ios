@@ -10,6 +10,9 @@
 		00EF16042549D647B388D22F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F01F414CD5C7E76A18B1F7 /* libPods.a */; };
 		B82138E61AA337B400E86B59 /* SLKMessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B82138E31AA337B400E86B59 /* SLKMessageViewCell.m */; };
 		B82138E71AA337B400E86B59 /* SLKMessageViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B82138E51AA337B400E86B59 /* SLKMessageViewLayout.m */; };
+		B82138E91AA33FAA00E86B59 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82138E81AA33FAA00E86B59 /* ChatMessageCell.swift */; };
+		B82138EB1AA33FF300E86B59 /* ChatMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82138EA1AA33FF300E86B59 /* ChatMessageCell.xib */; };
+		B82138ED1AA3416D00E86B59 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82138EC1AA3416D00E86B59 /* Extensions.swift */; };
 		B87B30AC1AA2F18000D37C51 /* ChatListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B30AB1AA2F18000D37C51 /* ChatListTableCell.swift */; };
 		B8A22A9E1A9F31E200BEB50F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A22A9D1A9F31E200BEB50F /* AppDelegate.swift */; };
 		B8A22AA01A9F31E200BEB50F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A22A9F1A9F31E200BEB50F /* LoginViewController.swift */; };
@@ -44,6 +47,9 @@
 		B82138E31AA337B400E86B59 /* SLKMessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMessageViewCell.m; sourceTree = "<group>"; };
 		B82138E41AA337B400E86B59 /* SLKMessageViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMessageViewLayout.h; sourceTree = "<group>"; };
 		B82138E51AA337B400E86B59 /* SLKMessageViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMessageViewLayout.m; sourceTree = "<group>"; };
+		B82138E81AA33FAA00E86B59 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
+		B82138EA1AA33FF300E86B59 /* ChatMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatMessageCell.xib; sourceTree = "<group>"; };
+		B82138EC1AA3416D00E86B59 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B87B30AB1AA2F18000D37C51 /* ChatListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListTableCell.swift; sourceTree = "<group>"; };
 		B8A22A981A9F31E200BEB50F /* landline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = landline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A22A9C1A9F31E200BEB50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,9 +140,12 @@
 				B8CD53721AA0E49700CD6830 /* ChatViewController.swift */,
 				B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */,
 				B87B30AB1AA2F18000D37C51 /* ChatListTableCell.swift */,
+				B82138E81AA33FAA00E86B59 /* ChatMessageCell.swift */,
+				B82138EA1AA33FF300E86B59 /* ChatMessageCell.xib */,
 				B8CD53791AA1B18F00CD6830 /* CentralNavigationViewController.swift */,
 				B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */,
 				B8A22ABF1AA0DF0C00BEB50F /* SlideMenuController.swift */,
+				B82138EC1AA3416D00E86B59 /* Extensions.swift */,
 				B8A22A9B1A9F31E200BEB50F /* Supporting Files */,
 			);
 			path = landline;
@@ -255,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8A22AA31A9F31E200BEB50F /* Main.storyboard in Resources */,
+				B82138EB1AA33FF300E86B59 /* ChatMessageCell.xib in Resources */,
 				B8A22AA81A9F31E200BEB50F /* LaunchScreen.xib in Resources */,
 				B8A22AA51A9F31E200BEB50F /* Images.xcassets in Resources */,
 			);
@@ -313,12 +323,14 @@
 				B8A22AC01AA0DF0C00BEB50F /* SlideMenuController.swift in Sources */,
 				B8A22A9E1A9F31E200BEB50F /* AppDelegate.swift in Sources */,
 				B82138E71AA337B400E86B59 /* SLKMessageViewLayout.m in Sources */,
+				B82138E91AA33FAA00E86B59 /* ChatMessageCell.swift in Sources */,
 				B8CD53761AA19A5D00CD6830 /* ChatListViewController.swift in Sources */,
 				B8CD53731AA0E49700CD6830 /* ChatViewController.swift in Sources */,
 				B8CD53711AA0E48B00CD6830 /* MenuViewController.swift in Sources */,
 				B82138E61AA337B400E86B59 /* SLKMessageViewCell.m in Sources */,
 				B8CD537A1AA1B18F00CD6830 /* CentralNavigationViewController.swift in Sources */,
 				B8CD53781AA19A7500CD6830 /* SettingsViewController.swift in Sources */,
+				B82138ED1AA3416D00E86B59 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

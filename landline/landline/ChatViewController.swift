@@ -27,7 +27,7 @@ class ChatViewController : SLKTextViewController {
         self.inverted = false
         
         self.textView.placeholder = "Message"
-        self.textView.placeholderColor = UIColor.lightGrayColor()
+        self.textView.placeholderColor = UIColor.clearColor()
         
         self.leftButton.setImage(UIImage(named: "icn_upload"), forState: UIControlState.Normal)
         self.leftButton.tintColor = UIColor.grayColor()
@@ -39,7 +39,8 @@ class ChatViewController : SLKTextViewController {
         
         self.typingIndicatorView.canResignByTouch = true
         
-        self.collectionView!.registerClass(SLKMessageViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
+        var nib : UINib = UINib(nibName: "ChatMessageCell", bundle: nil)
+        self.collectionView.registerNib(nib, forCellWithReuseIdentifier: "ChatMessageCell")
         self.collectionView!.backgroundColor = UIColor.whiteColor()
         
         for index in 0...3 {
@@ -79,15 +80,13 @@ class ChatViewController : SLKTextViewController {
         return self.messages.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> SLKMessageViewCell {
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> ChatMessageCell {
         
         let message = self.messages[indexPath.row] as String
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as SLKMessageViewCell
-        cell.backgroundColor = UIColor.blackColor()
-        cell.titleLabel.text = message
+        var cell : ChatMessageCell? = collectionView.dequeueReusableCellWithReuseIdentifier("ChatMessageCell", forIndexPath: indexPath) as? ChatMessageCell
         
-        return cell
+        return cell!
     }
     
     func collectionView(collectionView: UICollectionView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
