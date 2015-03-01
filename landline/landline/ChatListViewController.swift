@@ -10,6 +10,8 @@ import UIKit
 
 class ChatListViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var selectedChatName : String = ""
+    
     @IBAction func showMenu() {
         NSNotificationCenter.defaultCenter().postNotificationName("showMenu", object: nil)
     }
@@ -20,16 +22,39 @@ class ChatListViewController : UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 3
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ChatListTableViewCell") as UITableViewCell
+        var cell : ChatListTableCell = tableView.dequeueReusableCellWithIdentifier("ChatListTableCell") as ChatListTableCell
+
+        switch (indexPath.row) {
+            case 0:
+                cell.chatNameLbl?.text = "Landline"
+            case 1:
+                cell.chatNameLbl?.text = "Assembly"
+            case 2:
+                cell.chatNameLbl?.text = "The Super Friends"
+            default:
+                break
+        }
+        
+        
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var cell : ChatListTableCell = tableView.cellForRowAtIndexPath(indexPath) as ChatListTableCell
+        
+        selectedChatName = cell.chatNameLbl!.text!
         performSegueWithIdentifier("ChatViewController", sender: nil);
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ChatViewController" {
+            var vc = segue.destinationViewController as ChatViewController
+            vc.navigationItem.title = selectedChatName
+        }
     }
 }

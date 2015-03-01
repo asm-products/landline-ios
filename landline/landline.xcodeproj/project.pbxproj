@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00EF16042549D647B388D22F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F01F414CD5C7E76A18B1F7 /* libPods.a */; };
+		B87B30AC1AA2F18000D37C51 /* ChatListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B30AB1AA2F18000D37C51 /* ChatListTableCell.swift */; };
 		B8A22A9E1A9F31E200BEB50F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A22A9D1A9F31E200BEB50F /* AppDelegate.swift */; };
 		B8A22AA01A9F31E200BEB50F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A22A9F1A9F31E200BEB50F /* LoginViewController.swift */; };
 		B8A22AA31A9F31E200BEB50F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A22AA11A9F31E200BEB50F /* Main.storyboard */; };
@@ -33,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24F01F414CD5C7E76A18B1F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		88D3BBB8B8F3E387179DFA58 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B82138E11AA3291800E86B59 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		B87B30AB1AA2F18000D37C51 /* ChatListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListTableCell.swift; sourceTree = "<group>"; };
 		B8A22A981A9F31E200BEB50F /* landline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = landline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A22A9C1A9F31E200BEB50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8A22A9D1A9F31E200BEB50F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +56,7 @@
 		B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B8CD53791AA1B18F00CD6830 /* CentralNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralNavigationViewController.swift; sourceTree = "<group>"; };
+		FDABD008382063687537C002 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00EF16042549D647B388D22F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08B02979C8027AF8F183FC6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88D3BBB8B8F3E387179DFA58 /* Pods.debug.xcconfig */,
+				FDABD008382063687537C002 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		97FC0F43F0EE8725C9E6A775 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24F01F414CD5C7E76A18B1F7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8A22A8F1A9F31E200BEB50F = {
 			isa = PBXGroup;
 			children = (
 				B8A22A9A1A9F31E200BEB50F /* landline */,
 				B8A22AB01A9F31E200BEB50F /* landlineTests */,
 				B8A22A991A9F31E200BEB50F /* Products */,
+				08B02979C8027AF8F183FC6A /* Pods */,
+				97FC0F43F0EE8725C9E6A775 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +127,7 @@
 				B8CD53701AA0E48B00CD6830 /* MenuViewController.swift */,
 				B8CD53721AA0E49700CD6830 /* ChatViewController.swift */,
 				B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */,
+				B87B30AB1AA2F18000D37C51 /* ChatListTableCell.swift */,
 				B8CD53791AA1B18F00CD6830 /* CentralNavigationViewController.swift */,
 				B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */,
 				B8A22ABF1AA0DF0C00BEB50F /* SlideMenuController.swift */,
@@ -112,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				B8A22A9C1A9F31E200BEB50F /* Info.plist */,
+				B82138E11AA3291800E86B59 /* Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8A22AB71A9F31E200BEB50F /* Build configuration list for PBXNativeTarget "landline" */;
 			buildPhases = (
+				F4BE6D81F993CC416523FDEA /* Check Pods Manifest.lock */,
 				B8A22A941A9F31E200BEB50F /* Sources */,
 				B8A22A951A9F31E200BEB50F /* Frameworks */,
 				B8A22A961A9F31E200BEB50F /* Resources */,
+				DEF8946A17DF5C3D1AFAD6FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,11 +259,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DEF8946A17DF5C3D1AFAD6FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4BE6D81F993CC416523FDEA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B8A22A941A9F31E200BEB50F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87B30AC1AA2F18000D37C51 /* ChatListTableCell.swift in Sources */,
 				B8A22ABE1AA0DEC400BEB50F /* MainViewController.swift in Sources */,
 				B8A22AA01A9F31E200BEB50F /* LoginViewController.swift in Sources */,
 				B8A22AC01AA0DF0C00BEB50F /* SlideMenuController.swift in Sources */,
@@ -364,21 +429,25 @@
 		};
 		B8A22AB81A9F31E200BEB50F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88D3BBB8B8F3E387179DFA58 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = landline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "landline/bridging-header.h";
 			};
 			name = Debug;
 		};
 		B8A22AB91A9F31E200BEB50F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDABD008382063687537C002 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = landline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "landline/bridging-header.h";
 			};
 			name = Release;
 		};

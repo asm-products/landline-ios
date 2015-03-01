@@ -170,21 +170,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListTableViewCell" rowHeight="60" id="OwU-1z-hCI">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListTableCell" rowHeight="60" id="OwU-1z-hCI" customClass="ChatListTableCell" customModule="landline" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OwU-1z-hCI" id="2tE-Uj-an1">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aao-tJ-5wI">
-                                                    <rect key="frame" x="8" y="5" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChatGroup" translatesAutoresizingMaskIntoConstraints="NO" id="aao-tJ-5wI">
+                                                    <rect key="frame" x="13" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="QbA-SF-NJz"/>
-                                                        <constraint firstAttribute="width" constant="50" id="ZQa-gv-2hQ"/>
+                                                        <constraint firstAttribute="width" constant="40" id="ZQa-gv-2hQ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="sFQ-1i-a2Y"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="QbA-SF-NJz"/>
+                                                        </mask>
+                                                    </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiq-VU-l2q">
-                                                    <rect key="frame" x="66" y="17" width="215" height="25"/>
+                                                    <rect key="frame" x="78" y="17" width="215" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="215" id="IIE-3J-sPs"/>
                                                     </constraints>
@@ -194,14 +200,18 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aao-tJ-5wI" firstAttribute="leading" secondItem="2tE-Uj-an1" secondAttribute="leading" constant="8" id="5Nq-UZ-o9P"/>
+                                                <constraint firstItem="aao-tJ-5wI" firstAttribute="leading" secondItem="2tE-Uj-an1" secondAttribute="leading" constant="13" id="5Nq-UZ-o9P"/>
                                                 <constraint firstItem="hiq-VU-l2q" firstAttribute="top" secondItem="2tE-Uj-an1" secondAttribute="topMargin" constant="9" id="Dvt-bk-qRZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="aao-tJ-5wI" secondAttribute="bottom" constant="5" id="IUV-1R-eTs"/>
+                                                <constraint firstAttribute="bottom" secondItem="aao-tJ-5wI" secondAttribute="bottom" constant="10" id="IUV-1R-eTs"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hiq-VU-l2q" secondAttribute="bottom" constant="10" id="NM2-v0-red"/>
-                                                <constraint firstItem="hiq-VU-l2q" firstAttribute="leading" secondItem="aao-tJ-5wI" secondAttribute="trailing" constant="8" id="WaG-bf-1nG"/>
-                                                <constraint firstItem="aao-tJ-5wI" firstAttribute="top" secondItem="2tE-Uj-an1" secondAttribute="top" constant="5" id="Zut-Fe-TcI"/>
+                                                <constraint firstItem="hiq-VU-l2q" firstAttribute="leading" secondItem="aao-tJ-5wI" secondAttribute="trailing" constant="25" id="WaG-bf-1nG"/>
+                                                <constraint firstItem="aao-tJ-5wI" firstAttribute="top" secondItem="2tE-Uj-an1" secondAttribute="top" constant="10" id="Zut-Fe-TcI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chatIconImageView" destination="aao-tJ-5wI" id="Ybs-ca-izM"/>
+                                            <outlet property="chatNameLbl" destination="hiq-VU-l2q" id="0Tk-hW-Gzk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -310,4 +320,7 @@
             <point key="canvasLocation" x="1008" y="1044"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ChatGroup" width="99" height="70"/>
+    </resources>
 </document>

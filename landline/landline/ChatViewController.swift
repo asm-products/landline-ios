@@ -6,9 +6,10 @@
 //  Copyright (c) 2015 landline. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ChatViewController : UIViewController {
+class ChatViewController : SLKTextViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
