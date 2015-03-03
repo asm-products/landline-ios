@@ -12,7 +12,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZUK-n9-xjZ" id="B07-Ae-0Lq">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H68-mV-JQW">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserAvatar3" translatesAutoresizingMaskIntoConstraints="NO" id="H68-mV-JQW">
                         <rect key="frame" x="8" y="9" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="Yoh-tJ-KBQ"/>
@@ -78,9 +78,13 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="messageLbl" destination="Fqr-dy-iG5" id="JZR-JN-Uyu"/>
+                <outlet property="userImageView" destination="H68-mV-JQW" id="ylU-YS-jWO"/>
                 <outlet property="usernameLbl" destination="9rJ-1A-Ypv" id="hZ8-uf-kaf"/>
             </connections>
             <point key="canvasLocation" x="416.5" y="337"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="UserAvatar3" width="41" height="36"/>
+    </resources>
 </document>

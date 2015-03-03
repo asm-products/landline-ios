@@ -12,6 +12,7 @@ import UIKit
 class ChatViewController : SLKTextViewController {
     
     var messages : Array<String> = Array<String>()
+    var avatars : Array<String> = Array<String>()
     
     override class func tableViewStyleForCoder(decoder: NSCoder) -> UITableViewStyle {
         return UITableViewStyle.Plain;
@@ -46,6 +47,9 @@ class ChatViewController : SLKTextViewController {
         for index in 0...3 {
             let message : String = LoremIpsum.wordsWithNumber(50)
             self.messages.append(message)
+            
+            var imageName = "UserAvatar\(rand() % 3 + 1)"
+            self.avatars.append(imageName)
         }
 
     }
@@ -54,12 +58,20 @@ class ChatViewController : SLKTextViewController {
         super.viewWillAppear(animated)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        let idxPath : NSIndexPath = NSIndexPath(forItem: self.messages.count - 1, inSection: 0)
+
+        self.tableView.scrollToRowAtIndexPath(idxPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
+    }
+    
     override func didPressRightButton(sender: AnyObject!) {
         self.textView.refreshFirstResponder()
         
         let message = self.textView.text.copy() as NSString
+        let avatar = "UserAvatar4"
         
         self.messages.append(message)
+        self.avatars.append(avatar)
         
         let idxPath : NSIndexPath = NSIndexPath(forItem: self.messages.count - 1, inSection: 0)
         self.tableView.reloadData()
@@ -80,8 +92,11 @@ class ChatViewController : SLKTextViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let message = self.messages[indexPath.row] as String
         var cell : ChatMessageCell? = tableView.dequeueReusableCellWithIdentifier("ChatMessageCell", forIndexPath: indexPath) as? ChatMessageCell
+        let message = self.messages[indexPath.row] as String
+        var avatar : String = self.avatars[indexPath.row] as String
+        
+        cell?.userImageView?.image = UIImage(named: avatar);
         cell?.messageLbl?.text = message;
         
         return cell!

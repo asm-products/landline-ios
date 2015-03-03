@@ -15,6 +15,14 @@ class ChatMessageCell : UITableViewCell {
     
     @IBOutlet var usernameLbl : UILabel?
     
+    @IBOutlet var userImageView : UIImageView?
+    
+    override func layoutSubviews() {
+        self.userImageView?.layer.cornerRadius = self.userImageView!.frame.width / 2
+        self.userImageView?.layer.masksToBounds = true
+        super.layoutSubviews()
+    }
+    
     class func instanceFromNib() -> ChatMessageCell {
         return self.loadFromNibNamed("ChatMessageCell", bundle: nil) as ChatMessageCell
     }
