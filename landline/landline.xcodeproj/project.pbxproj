@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00EF16042549D647B388D22F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F01F414CD5C7E76A18B1F7 /* libPods.a */; };
-		B82138E61AA337B400E86B59 /* SLKMessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B82138E31AA337B400E86B59 /* SLKMessageViewCell.m */; };
 		B82138E71AA337B400E86B59 /* SLKMessageViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B82138E51AA337B400E86B59 /* SLKMessageViewLayout.m */; };
 		B82138E91AA33FAA00E86B59 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82138E81AA33FAA00E86B59 /* ChatMessageCell.swift */; };
 		B82138EB1AA33FF300E86B59 /* ChatMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82138EA1AA33FF300E86B59 /* ChatMessageCell.xib */; };
@@ -43,8 +42,6 @@
 		24F01F414CD5C7E76A18B1F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D3BBB8B8F3E387179DFA58 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B82138E11AA3291800E86B59 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		B82138E21AA337B400E86B59 /* SLKMessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMessageViewCell.h; sourceTree = "<group>"; };
-		B82138E31AA337B400E86B59 /* SLKMessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMessageViewCell.m; sourceTree = "<group>"; };
 		B82138E41AA337B400E86B59 /* SLKMessageViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKMessageViewLayout.h; sourceTree = "<group>"; };
 		B82138E51AA337B400E86B59 /* SLKMessageViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKMessageViewLayout.m; sourceTree = "<group>"; };
 		B82138E81AA33FAA00E86B59 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
@@ -154,8 +151,6 @@
 		B8A22A9B1A9F31E200BEB50F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B82138E21AA337B400E86B59 /* SLKMessageViewCell.h */,
-				B82138E31AA337B400E86B59 /* SLKMessageViewCell.m */,
 				B82138E41AA337B400E86B59 /* SLKMessageViewLayout.h */,
 				B82138E51AA337B400E86B59 /* SLKMessageViewLayout.m */,
 				B8A22A9C1A9F31E200BEB50F /* Info.plist */,
@@ -327,7 +322,6 @@
 				B8CD53761AA19A5D00CD6830 /* ChatListViewController.swift in Sources */,
 				B8CD53731AA0E49700CD6830 /* ChatViewController.swift in Sources */,
 				B8CD53711AA0E48B00CD6830 /* MenuViewController.swift in Sources */,
-				B82138E61AA337B400E86B59 /* SLKMessageViewCell.m in Sources */,
 				B8CD537A1AA1B18F00CD6830 /* CentralNavigationViewController.swift in Sources */,
 				B8CD53781AA19A7500CD6830 /* SettingsViewController.swift in Sources */,
 				B82138ED1AA3416D00E86B59 /* Extensions.swift in Sources */,

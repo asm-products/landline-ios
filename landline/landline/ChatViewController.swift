@@ -13,9 +13,8 @@ class ChatViewController : SLKTextViewController {
     
     var messages : Array<String> = Array<String>()
     
-    override class func collectionViewLayoutForCoder(decoder: NSCoder) -> UICollectionViewLayout {
-        let layout = SLKMessageViewLayout();
-        return layout
+    override class func tableViewStyleForCoder(decoder: NSCoder) -> UITableViewStyle {
+        return UITableViewStyle.Plain;
     }
     
     override func viewDidLoad() {
@@ -40,8 +39,9 @@ class ChatViewController : SLKTextViewController {
         self.typingIndicatorView.canResignByTouch = true
         
         var nib : UINib = UINib(nibName: "ChatMessageCell", bundle: nil)
-        self.collectionView.registerNib(nib, forCellWithReuseIdentifier: "ChatMessageCell")
-        self.collectionView!.backgroundColor = UIColor.whiteColor()
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "ChatMessageCell")
+        self.tableView!.backgroundColor = UIColor.whiteColor()
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None;
         
         for index in 0...3 {
             let message : String = LoremIpsum.wordsWithNumber(20)
@@ -63,51 +63,35 @@ class ChatViewController : SLKTextViewController {
         self.messages.insert(message, atIndex: 0)
         
         let idxPath : NSIndexPath = NSIndexPath(forItem: 0, inSection: 0)
-        self.collectionView.insertItemsAtIndexPaths([idxPath])
+        self.tableView.insertRowsAtIndexPaths([idxPath], withRowAnimation: UITableViewRowAnimation.None)
         
-        self.collectionView.slk_scrollToBottomAnimated(true)
+        self.tableView.slk_scrollToBottomAnimated(true)
         
         super.didPressRightButton(sender)
     }
-    
-    // MARK: - UICollectionViewDataSource
-    
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+//
+//    // MARK: - UICollectionViewDataSource
+//    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-    
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.messages.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> ChatMessageCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let message = self.messages[indexPath.row] as String
-        
-        var cell : ChatMessageCell? = collectionView.dequeueReusableCellWithReuseIdentifier("ChatMessageCell", forIndexPath: indexPath) as? ChatMessageCell
+        var cell : ChatMessageCell? = tableView.dequeueReusableCellWithIdentifier("ChatMessageCell", forIndexPath: indexPath) as? ChatMessageCell
         
         return cell!
     }
     
-    func collectionView(collectionView: UICollectionView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
-        let message = self.messages[indexPath.row] as String
-        let width: CGFloat = CGRectGetWidth(collectionView.frame)
-        
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        paragraphStyle.alignment = NSTextAlignment.Left
-        
-        var attributes: NSDictionary = [NSFontAttributeName: UIFont.systemFontOfSize(17.0), NSParagraphStyleAttributeName: paragraphStyle]
-        
-        let bounds: CGRect = message.boundingRectWithSize(CGSizeMake(width, 0.0), options:NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: attributes, context: nil)
-        
-        if (message.utf16Count == 0) {
-            return 0.0;
-        }
-        
-        return (CGRectGetHeight(bounds)) as CGFloat;
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
     }
+
     
     // MARK: - UICollectionViewDataSource
     

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ChatMessageCell : UICollectionViewCell {
+class ChatMessageCell : UITableViewCell {
     class func instanceFromNib() -> ChatMessageCell {
         return self.loadFromNibNamed("ChatMessageCell", bundle: nil) as ChatMessageCell
     }

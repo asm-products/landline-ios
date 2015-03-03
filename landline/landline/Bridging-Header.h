@@ -8,5 +8,4 @@
 
 #import "SLKTextViewController.h"
 #import "SLKMessageViewLayout.h"
-#import "SLKMessageViewCell.h"
 #import <LoremIpsum/LoremIpsum.h>
