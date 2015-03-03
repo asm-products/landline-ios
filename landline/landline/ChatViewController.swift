@@ -44,7 +44,7 @@ class ChatViewController : SLKTextViewController {
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None;
         
         for index in 0...3 {
-            let message : String = LoremIpsum.wordsWithNumber(20)
+            let message : String = LoremIpsum.wordsWithNumber(50)
             self.messages.append(message)
         }
 
@@ -55,17 +55,15 @@ class ChatViewController : SLKTextViewController {
     }
     
     override func didPressRightButton(sender: AnyObject!) {
-        
         self.textView.refreshFirstResponder()
         
         let message = self.textView.text.copy() as NSString
         
-        self.messages.insert(message, atIndex: 0)
+        self.messages.append(message)
         
-        let idxPath : NSIndexPath = NSIndexPath(forItem: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([idxPath], withRowAnimation: UITableViewRowAnimation.None)
-        
-        self.tableView.slk_scrollToBottomAnimated(true)
+        let idxPath : NSIndexPath = NSIndexPath(forItem: self.messages.count - 1, inSection: 0)
+        self.tableView.reloadData()
+        self.tableView.scrollToRowAtIndexPath(idxPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
         
         super.didPressRightButton(sender)
     }
@@ -84,12 +82,27 @@ class ChatViewController : SLKTextViewController {
         
         let message = self.messages[indexPath.row] as String
         var cell : ChatMessageCell? = tableView.dequeueReusableCellWithIdentifier("ChatMessageCell", forIndexPath: indexPath) as? ChatMessageCell
+        cell?.messageLbl?.text = message;
         
         return cell!
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        
+        let message = self.messages[indexPath.row]
+        let width: CGFloat = CGRectGetWidth(tableView.frame) - 63.0
+        
+        var paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        paragraphStyle.alignment = NSTextAlignment.Left
+        
+        var attributes: NSDictionary = [NSFontAttributeName: UIFont.systemFontOfSize(17.0), NSParagraphStyleAttributeName: paragraphStyle]
+        
+        var msgSize : CGRect = message.boundingRectWithSize(CGSizeMake(250, 1000), options:NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: attributes, context: nil)
+        var msgHeight = (msgSize.height < 100 ? 100 : msgSize.height + 10)
+        var bounds = CGRectMake(0, 0, 250, msgHeight)
+    
+        return (CGRectGetHeight(bounds)) as CGFloat;
     }
 
     
