@@ -20,9 +20,6 @@ class MainViewController : UIViewController {
         super.viewDidLoad()
         loadCentralViewController()
         
-        self.navigationController?.navigationBarHidden = true
-        self.navigationItem.hidesBackButton = true
-        
         self.menuViewController?.view.frame = self.view.frame;
         self.slideMenuController = SlideMenuController(mainViewController: centralNavigationViewController!, leftMenuViewController: menuViewController!)
         

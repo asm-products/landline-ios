@@ -12,6 +12,10 @@ class ChatListViewController : UIViewController, UITableViewDataSource, UITableV
     
     var selectedChatName : String = ""
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     @IBAction func showMenu() {
         NSNotificationCenter.defaultCenter().postNotificationName("showMenu", object: nil)
     }

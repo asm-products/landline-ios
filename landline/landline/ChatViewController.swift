@@ -45,7 +45,9 @@ class ChatViewController : SLKTextViewController {
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None;
         
         for index in 0...3 {
-            let message : String = LoremIpsum.wordsWithNumber(50)
+            let messageSize : Int = Int(rand() % 50)
+            
+            let message : String = LoremIpsum.wordsWithNumber(messageSize)
             self.messages.append(message)
             
             var imageName = "UserAvatar\(rand() % 3 + 1)"
