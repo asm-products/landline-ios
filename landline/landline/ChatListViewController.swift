@@ -54,6 +54,7 @@ class ChatListViewController : UIViewController, UITableViewDataSource, UITableV
         selectedChatName = cell.chatNameLbl!.text!
         performSegueWithIdentifier("ChatViewController", sender: nil);
     }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ChatViewController" {

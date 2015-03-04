@@ -10,4 +10,9 @@ import UIKit
 
 class SettingsViewController : UIViewController {
     
+    
+    @IBAction func showMenu() {
+        NSNotificationCenter.defaultCenter().postNotificationName("showMenu", object: nil)
+    }
+    
 }
