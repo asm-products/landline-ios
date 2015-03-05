@@ -9,13 +9,17 @@
 import Foundation
 import UIKit
 
-class ChatViewController : UIViewController {
+class ChatViewController : UIViewController, UIScrollViewDelegate {
     @IBOutlet var channelScrollView : UIScrollView?
     
     var channels : Array<ChannelViewController> = Array<ChannelViewController>()
-    
+
+    var titleView : ChatHeaderView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.loadTopTitleView()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -24,6 +28,7 @@ class ChatViewController : UIViewController {
         var contentWidth = UIScreen.mainScreen().bounds.width * 5
         self.channelScrollView?.contentSize = CGSizeMake(contentWidth, 0)
         self.channelScrollView?.pagingEnabled = true
+        self.channelScrollView?.delegate = self
         
         for var i = 0; i < 5; i++ {
             var channel = ChannelViewController.instanceFromStoryboard()
@@ -38,5 +43,17 @@ class ChatViewController : UIViewController {
             self.channelScrollView?.addSubview(channel.view)
             self.channelScrollView?.layoutIfNeeded()
         }
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        var page : Int = Int(scrollView.contentOffset.x / scrollView.frame.size.width);
+        titleView?.scrollToPage(page)
+    }
+
+    
+    func loadTopTitleView () {
+        var screenSize = self.view.bounds
+        self.titleView = ChatHeaderView.instanceFromNib()
+        self.navigationItem.titleView = self.titleView!
     }
 }

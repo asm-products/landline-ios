@@ -15,8 +15,6 @@ class ChannelViewController : SLKTextViewController {
     
     var avatars : Array<String> = Array<String>()
     
-    var titleView : UIView?
-    
     class func instanceFromStoryboard() -> ChannelViewController {
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewControllerWithIdentifier("ChannelViewController") as ChannelViewController
@@ -28,7 +26,6 @@ class ChannelViewController : SLKTextViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadTopTitleView()
 
         self.bounces = true
         self.shakeToClearEnabled = true
@@ -139,11 +136,7 @@ class ChannelViewController : SLKTextViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func loadTopTitleView () {
-        var screenSize = self.view.bounds
-        self.titleView = ChatHeaderView.instanceFromNib()
-        self.navigationItem.titleView = self.titleView!
-    }
+
 
 
 }
