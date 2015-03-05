@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatHeaderView" customModule="landline" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTP-Hz-EFz">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="UCE-db-E0V"/>
+                    </constraints>
+                </scrollView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSEMBLY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rti-wC-l7B">
+                    <rect key="frame" x="0.0" y="25" width="200" height="15"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rti-wC-l7B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Fpr-BG-9ea"/>
+                <constraint firstItem="KTP-Hz-EFz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LYC-uV-OAG"/>
+                <constraint firstAttribute="trailing" secondItem="KTP-Hz-EFz" secondAttribute="trailing" id="QbK-eC-WqM"/>
+                <constraint firstAttribute="bottom" secondItem="rti-wC-l7B" secondAttribute="bottom" constant="5" id="k6Q-dV-FFe"/>
+                <constraint firstItem="KTP-Hz-EFz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oAt-Qh-VfE"/>
+                <constraint firstItem="rti-wC-l7B" firstAttribute="top" secondItem="KTP-Hz-EFz" secondAttribute="bottom" constant="1" id="rZw-Up-NXY"/>
+                <constraint firstAttribute="trailing" secondItem="rti-wC-l7B" secondAttribute="trailing" id="xj2-9J-P0D"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="channelListScrollView" destination="KTP-Hz-EFz" id="cdn-7P-Hce"/>
+            </connections>
+            <point key="canvasLocation" x="221" y="190.5"/>
+        </view>
+    </objects>
+</document>

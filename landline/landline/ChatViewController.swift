@@ -12,7 +12,10 @@ import UIKit
 class ChatViewController : SLKTextViewController {
     
     var messages : Array<String> = Array<String>()
+    
     var avatars : Array<String> = Array<String>()
+    
+    var titleView : UIView?
     
     override class func tableViewStyleForCoder(decoder: NSCoder) -> UITableViewStyle {
         return UITableViewStyle.Plain;
@@ -20,7 +23,8 @@ class ChatViewController : SLKTextViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.loadTopTitleView()
+
         self.bounces = true
         self.shakeToClearEnabled = true
         self.keyboardPanningEnabled = true
@@ -58,6 +62,7 @@ class ChatViewController : SLKTextViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -127,6 +132,12 @@ class ChatViewController : SLKTextViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func loadTopTitleView () {
+        var screenSize = self.view.bounds
+        self.titleView = ChatHeaderView.instanceFromNib()
+        self.navigationItem.titleView = self.titleView!
     }
 
 }
