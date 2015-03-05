@@ -24,10 +24,11 @@
 		B8B69AB71AA862E90022FE8F /* ChatHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8B69AB61AA862E90022FE8F /* ChatHeaderView.xib */; };
 		B8B69AB91AA862F50022FE8F /* ChatHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B69AB81AA862F50022FE8F /* ChatHeaderView.swift */; };
 		B8CD53711AA0E48B00CD6830 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53701AA0E48B00CD6830 /* MenuViewController.swift */; };
-		B8CD53731AA0E49700CD6830 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53721AA0E49700CD6830 /* ChatViewController.swift */; };
+		B8CD53731AA0E49700CD6830 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53721AA0E49700CD6830 /* ChannelViewController.swift */; };
 		B8CD53761AA19A5D00CD6830 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */; };
 		B8CD53781AA19A7500CD6830 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */; };
 		B8CD537A1AA1B18F00CD6830 /* CentralNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD53791AA1B18F00CD6830 /* CentralNavigationViewController.swift */; };
+		B8FCFBAE1AA87DA7007726C3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FCFBAD1AA87DA7007726C3 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +66,11 @@
 		B8B69AB61AA862E90022FE8F /* ChatHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatHeaderView.xib; sourceTree = "<group>"; };
 		B8B69AB81AA862F50022FE8F /* ChatHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatHeaderView.swift; sourceTree = "<group>"; };
 		B8CD53701AA0E48B00CD6830 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		B8CD53721AA0E49700CD6830 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		B8CD53721AA0E49700CD6830 /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		B8CD53771AA19A7500CD6830 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B8CD53791AA1B18F00CD6830 /* CentralNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralNavigationViewController.swift; sourceTree = "<group>"; };
+		B8FCFBAD1AA87DA7007726C3 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FDABD008382063687537C002 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +141,8 @@
 				B8CD53751AA19A5D00CD6830 /* ChatListViewController.swift */,
 				B82138E81AA33FAA00E86B59 /* ChatMessageCell.swift */,
 				B82138EA1AA33FF300E86B59 /* ChatMessageCell.xib */,
-				B8CD53721AA0E49700CD6830 /* ChatViewController.swift */,
+				B8CD53721AA0E49700CD6830 /* ChannelViewController.swift */,
+				B8FCFBAD1AA87DA7007726C3 /* ChatViewController.swift */,
 				B82138EC1AA3416D00E86B59 /* Extensions.swift */,
 				B8A22AA41A9F31E200BEB50F /* Images.xcassets */,
 				B8A22AA61A9F31E200BEB50F /* LaunchScreen.xib */,
@@ -328,10 +331,11 @@
 				B82138E71AA337B400E86B59 /* SLKMessageViewLayout.m in Sources */,
 				B82138E91AA33FAA00E86B59 /* ChatMessageCell.swift in Sources */,
 				B8CD53761AA19A5D00CD6830 /* ChatListViewController.swift in Sources */,
-				B8CD53731AA0E49700CD6830 /* ChatViewController.swift in Sources */,
+				B8CD53731AA0E49700CD6830 /* ChannelViewController.swift in Sources */,
 				B8CD53711AA0E48B00CD6830 /* MenuViewController.swift in Sources */,
 				B8CD537A1AA1B18F00CD6830 /* CentralNavigationViewController.swift in Sources */,
 				B8CD53781AA19A7500CD6830 /* SettingsViewController.swift in Sources */,
+				B8FCFBAE1AA87DA7007726C3 /* ChatViewController.swift in Sources */,
 				B82138ED1AA3416D00E86B59 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
