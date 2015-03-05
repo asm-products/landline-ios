@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="200" height="45"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTP-Hz-EFz">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTP-Hz-EFz">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="UCE-db-E0V"/>
